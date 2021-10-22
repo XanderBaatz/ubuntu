@@ -5,8 +5,8 @@ set -e
 
 # variables
 dist_name=$(uname -n)
-code_name=$(cat /etc/*-release | grep DISTRIB_CODENAME| cut -f2 -d'=')
-deb_code_name=$(dpkg --status tzdata | grep Provides| cut -f2 -d'-')
+code_name=$(cat /etc/*-release | grep DISTRIB_CODENAME | cut -f2 -d'=')
+deb_code_name=$(dpkg --status tzdata | grep Provides | cut -f2 -d'-')
 repo_url=$(cat /etc/apt/sources.list | grep -o "deb http[^']\+${dist_name}" | head -1 | cut -f2 -d' ')
 component="main restricted universe multiverse"
 
