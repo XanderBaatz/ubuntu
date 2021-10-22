@@ -17,10 +17,13 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo sh -c "cat << EOF > /etc/apt/sources.list
 deb ${repo_url} stable ${component}
 deb-src ${repo_url} stable ${component}
+
 deb http://security.debian.org/ stable-security ${component}
 deb-src http://security.debian.org/ stable-security ${component}
+
 deb ${repo_url} stable-updates ${component}
 deb-src ${repo_url} stable-updates ${component}
+
 deb ${repo_url} ${code_name}-backports ${component}
 EOF"
 
