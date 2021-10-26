@@ -8,9 +8,14 @@ fi
 
 sudo apt install -y network-manager --no-install-recommends
 
-sudo systemctl disable systemd-networkd.{service,socket}
-sudo systemctl mask systemd-networkd.{service,socket}
-sudo systemctl stop systemd-networkd.{service,socket}
+sudo systemctl disable systemd-networkd.service
+sudo systemctl disable systemd-networkd.socket
+
+sudo systemctl mask systemd-networkd.service
+sudo systemctl mask systemd-networkd.socket
+
+sudo systemctl stop systemd-networkd.service
+sudo systemctl stop systemd-networkd.socket
 
 sudo cp /etc/netplan/*.yaml $(ls /etc/netplan/*.yaml).bak
 sudo rm -rf /etc/netplan/*.yaml
