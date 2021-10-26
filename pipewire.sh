@@ -1,4 +1,5 @@
 #!/bin/bash
+# wget -qO- https://git.io/JilFv | sudo sh
 
 # Full credit to reddit user MaundeRZ
 # https://www.reddit.com/r/Ubuntu/comments/o7xd3n/dirty_script_to_make_pipewire_the_default_and/
