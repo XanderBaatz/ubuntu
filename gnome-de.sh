@@ -19,4 +19,6 @@ gdm3 \
 gnome-keyring \
 nautilus
 
-sudo startx
+echo ""
+echo "run 'sudo startx' to launch gnome"
+echo ""
