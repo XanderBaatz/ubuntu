@@ -5,4 +5,4 @@
 e_pkgs="linux-generic*|grub*|ubuntu-minimal|ubuntu-standard"
 
 sudo apt-mark auto $(apt list --installed | cut -f1 -d'/' | grep -v "^Listing" | grep -E -v "linux-generic*|grub*|ubuntu-minimal|ubuntu-standard") && sudo apt autoremove --purge -y && sudo apt autoclean all -y
-sudo update-grub{,2}
+sudo update-grub
