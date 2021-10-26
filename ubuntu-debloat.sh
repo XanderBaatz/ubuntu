@@ -4,4 +4,5 @@
 #delete all packages except for generic kernel, grub, ubuntu-minimal...
 e_pkgs="linux-generic*|grub*|ubuntu-minimal|ubuntu-standard"
 
-sudo sh -c "apt-mark auto $(apt list --installed | cut -f1 -d'/' | grep -v "^Listing" | grep -E -v "linux-generic*|grub*|ubuntu-minimal|ubuntu-standard") -y && apt autoremove --purge -y && apt autoclean all -y"
+sudo apt-mark auto $(apt list --installed | cut -f1 -d'/' | grep -v "^Listing" | grep -E -v "linux-generic*|grub*|ubuntu-minimal|ubuntu-standard") -y && sudo apt autoremove --purge -y && sudo apt autoclean all -y
+sudo update-grub{,2}
