@@ -1,6 +1,11 @@
 #!/bin/bash
 # wget -qO- https://git.io/JiliQ | sudo sh
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 #delete all packages except for generic kernel, grub, ubuntu-minimal...
 e_pkgs="linux-generic*|grub*|ubuntu-minimal"
 
