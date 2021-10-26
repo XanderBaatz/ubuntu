@@ -17,7 +17,8 @@ gnome-tweak-tool \
 xdg-user-dirs \
 gdm3 \
 gnome-keyring \
-nautilus
+nautilus \
+breeze-cursor-theme
 
 echo ""
 echo "run 'startx' to launch gnome"
