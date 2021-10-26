@@ -1,11 +1,6 @@
 #!/bin/bash
 # wget -qO- https://git.io/Jily6 | sudo sh
 
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
-
 sudo apt install -y network-manager --no-install-recommends
 
 sudo systemctl disable systemd-networkd.service
