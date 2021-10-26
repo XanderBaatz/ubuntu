@@ -1,7 +1,7 @@
 #!/bin/bash
-# wget -qO- 
+# wget -qO- https://git.io/Jil9P | sudo sh
 
-sudo apt update -y
+sudo apt update -y && sudo apt upgrade -y
 
 #xorg and libinput
 sudo apt install --no-install-recommends --no-install-suggests \
