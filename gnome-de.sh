@@ -20,5 +20,5 @@ gnome-keyring \
 nautilus
 
 echo ""
-echo "run 'sudo startx' to launch gnome"
+echo "run 'startx' to launch gnome"
 echo ""
