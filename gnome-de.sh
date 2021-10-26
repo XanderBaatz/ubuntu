@@ -4,12 +4,12 @@
 sudo apt update -y && sudo apt upgrade -y
 
 #xorg and libinput
-sudo apt install --no-install-recommends --no-install-suggests \
+sudo apt install --no-install-recommends --no-install-suggests -y \
 xinit \
 xserver-xorg-input-libinput
 
 #gnome de
-sudo apt install --no-install-recommends --no-install-suggests \
+sudo apt install --no-install-recommends --no-install-suggests -y \
 gnome-session \
 gnome-control-center \
 gnome-terminal \
