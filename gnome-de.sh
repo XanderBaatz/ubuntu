@@ -27,9 +27,10 @@ gnome-keyring \
 nautilus \
 breeze-cursor-theme
 
-#pop shell tiling
+#pop shell tiling and other extensions
 sudo apt install --no-install-recommends --no-install-suggests -y \
-pop-shell
+pop-shell \
+gnome-shell-extension-appindicator
 
 #enable installed gnome extensions
 for e in $(gnome-extensions list); do
