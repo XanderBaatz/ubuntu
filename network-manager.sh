@@ -23,9 +23,10 @@ network:
   renderer: NetworkManager
 EOF'
 
-# setup netplan for NM
+#enable netplan to use networkmanager instead of networkd
 sudo netplan generate
 sudo netplan apply
-# make sure NM is running
+
+#enable and restart networkmanager service
 sudo systemctl enable NetworkManager.service
 sudo systemctl restart NetworkManager.service
