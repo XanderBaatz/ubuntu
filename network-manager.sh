@@ -8,7 +8,7 @@ i_pkg="network-manager"
 sudo apt install --no-install-recommends --no-install-suggests -y ${i_pkg}
 
 #exit if network-manager isn't installed
-if [ "$(dpkg-query -W -f='${Status}' ${i_pkg} | grep -q -P '^install ok installed$'; echo $?)" != "0" ]; then
+if [ $(dpkg-query -W -f='${Status}' ${i_pkg} | grep -q -P '^install ok installed$'; echo $?) != "0" ]; then
   echo "${i_pkg} not installed, aborting."
   exit $1
 fi
