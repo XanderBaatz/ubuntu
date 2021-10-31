@@ -2,8 +2,7 @@
 # wget -qO- https://git.io/Jily6 | sudo sh
 
 #install network-manager
-sudo apt install -y --no-install-recommends --no-install-suggests \ 
-network-manager
+sudo apt install --no-install-recommends --no-install-suggests -y network-manager
 
 #disable networkd
 for s in $(systemctl | grep "systemd-networkd." | awk '{print $1}'); do
