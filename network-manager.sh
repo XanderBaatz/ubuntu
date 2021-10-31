@@ -34,6 +34,9 @@ EOF'
 sudo netplan generate
 sudo netplan apply
 
+#reload system daemon
+sudo systemctl daemon-reload
+
 #enable and restart networkmanager service
 sudo systemctl enable NetworkManager.service
 sudo systemctl restart NetworkManager.service
