@@ -31,6 +31,11 @@ breeze-cursor-theme
 sudo apt install --no-install-recommends --no-install-suggests -y \
 pop-shell
 
+#enable installed gnome extensions
+for e in $(gnome-extensions list); do
+  gnome-extensions enable $e
+done
+
 echo ""
-echo "run 'startx' to launch gnome"
+echo "Please reboot to finish the installation."
 echo ""
