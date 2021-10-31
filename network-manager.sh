@@ -1,7 +1,9 @@
 #!/bin/bash
 # wget -qO- https://git.io/Jily6 | sudo sh
 
-sudo apt install -y network-manager --no-install-recommends
+#install network-manager
+sudo apt install -y --no-install-recommends --no-install-suggests \ 
+network-manager
 
 sudo systemctl disable systemd-networkd.service
 sudo systemctl disable systemd-networkd.socket
