@@ -20,18 +20,11 @@ for s in $(systemctl | grep "systemd-networkd." | awk '{print $1}'); do
   sudo systemctl stop $s
 done
 
-#sudo systemctl disable systemd-networkd.service
-#sudo systemctl disable systemd-networkd.socket
-
-#sudo systemctl mask systemd-networkd.service
-#sudo systemctl mask systemd-networkd.socket
-
-#sudo systemctl stop systemd-networkd.service
-#sudo systemctl stop systemd-networkd.socket
-
+#backup old netplan configuration
 sudo cp /etc/netplan/*.yaml $(ls /etc/netplan/*.yaml).bak
 sudo rm -rf /etc/netplan/*.yaml
 
+#create networkmanager config for netplan
 sudo sh -c 'cat << EOF > /etc/netplan/01-network-manager-all.yaml
 network:
   version: 2
@@ -42,7 +35,7 @@ EOF'
 sudo netplan generate
 sudo netplan apply
 
-#reload system daemon
+#reload system daemon (services etc.)
 sudo systemctl daemon-reload
 
 #enable and restart networkmanager service
