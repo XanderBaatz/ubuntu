@@ -13,8 +13,6 @@ if [ $(dpkg-query -W -f='${Status}' ${i_pkg} | grep -q -P '^install ok installed
   exit $1
 fi
 
-exit $1
-
 #disable networkd
 for s in $(systemctl | grep "systemd-networkd." | awk '{print $1}'); do
   sudo systemctl disable $s;
