@@ -32,4 +32,4 @@ deb-src http://archive.canonical.com/ubuntu ${code_name} partner
 EOF"
 
 # update sources
-sudo apt update
+sudo apt update -y
