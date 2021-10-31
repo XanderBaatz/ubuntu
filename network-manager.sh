@@ -1,5 +1,5 @@
 #!/bin/bash
-# wget -qO- https://git.io/Jily6 | sudo bash
+# wget -qO- https://git.io/Jily6 | sudo sh
 
 #install network-manager
 sudo apt install -y --no-install-recommends --no-install-suggests \ 
