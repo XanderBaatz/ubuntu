@@ -32,6 +32,9 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
 pop-shell \
 gnome-shell-extension-appindicator
 
+#reload system daemon (services etc.)
+sudo systemctl daemon-reload
+
 #enable installed gnome extensions
 for e in $(gnome-extensions list); do
   gnome-extensions enable $e
