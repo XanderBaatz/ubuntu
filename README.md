@@ -1,4 +1,4 @@
-# Ubuntu Minimal
+# Ubuntu Minimal (testing phase)
 
 Ubuntu Minimal is an attempt to create a minimal OS based on Ubuntu, housing only the most essential tools.
 The general aim is to have a stable, yet flexible, foundation to build upon along with sane defaults and broad compatibility.
