@@ -8,7 +8,7 @@ sudo apt install  -y \
 software-properties-common
 
 #add popos repositories
-sudo add-apt-repository ppa:system76/pop -y && sudo apt-get update -y
+sudo add-apt-repository ppa:system76/pop -y && sudo apt-get update -y && sudo apt upgrade -y
 
 #xorg and libinput
 sudo apt install --no-install-recommends --no-install-suggests -y \
