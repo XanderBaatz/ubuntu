@@ -20,6 +20,9 @@ for s in $(systemctl | grep "systemd-networkd." | awk '{print $1}'); do
   sudo systemctl stop $s
 done
 
+#remove obsolete package "networkd-dispatcher"
+sudo apt autoremove --purge networkd-dispatcher -y
+
 #backup old netplan configuration
 sudo cp /etc/netplan/*.yaml $(ls /etc/netplan/*.yaml).bak
 sudo rm -rf /etc/netplan/*.yaml
