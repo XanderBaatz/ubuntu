@@ -1,7 +1,7 @@
 #!/bin/bash
 # wget -qO- https://git.io/Jily6 | sudo sh
 
-#package: network-manager
+#check package: network-manager
 i_pkg="network-manager"
 
 #install network-manager
