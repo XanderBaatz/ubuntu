@@ -1,8 +1,19 @@
 #!/bin/bash
 # wget -qO- https://git.io/Jily6 | sudo sh
 
+#package: network-manager
+i_pkg="network-manager"
+
 #install network-manager
-sudo apt install --no-install-recommends --no-install-suggests -y network-manager
+sudo apt install --no-install-recommends --no-install-suggests -y ${i_pkg}
+
+#exit if network-manager isn't installed
+if ! [ "$(dpkg-query -W -f='${Status}' ${i_pkg} | grep -q -P '^install ok installed$'; echo $?)" == "0" ]; then
+  echo "${pkg} not installed, aborting."
+  exit $1
+fi
+
+exit $1
 
 #disable networkd
 for s in $(systemctl | grep "systemd-networkd." | awk '{print $1}'); do
