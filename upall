@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+# Check if script is run as root
+if [ "$EUID" -ne 0 ];
+then
+	echo "Please run as root!"
+    exit
+fi
+
+# Update system (apt)
+if [ $(command -v "apt") &> /dev/null ];
+then
+	apt update -y
+	apt upgrade --auto-remove -y
+	apt clean -y
+	apt autoclean -y
+fi
+
+# Check if Flatpak command is availabe (is installed)
+if [ $(command -v "flatpak") &> /dev/null ];
+then
+	flatpak upgrade -y;
+fi
