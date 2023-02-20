@@ -23,3 +23,9 @@ if [ $(command -v "flatpak") &> /dev/null ];
 then
 	flatpak upgrade -y;
 fi
+
+# 'Ask to reboot' function
+reboot () { echo 'Would you like to reboot? [y/N]' && read x && [[ "$x" == "y" ]] && /sbin/reboot; }
+
+# Call reboot function
+reboot
